@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
+## Layout
+
+![image](https://user-images.githubusercontent.com/40905751/78416935-9cb71100-75f2-11ea-9b81-728ccd2046ed.png)
+
 ## Getting Started
 
 First, run the development server:
