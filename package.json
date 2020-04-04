@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "deploy": "npm run build && npm run export",
     "build:style": "tailwind build public/assets/styles/vendors.css -o public/assets/styles/tailwind.css"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.7.5",
     "isomorphic-unfetch": "^3.0.0",
