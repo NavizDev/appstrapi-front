@@ -15,7 +15,7 @@ const Home = (props) => {
               alt="Workcation"
             />
             <h1 className="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:text-4xl sm:mt-8 lg:text-3xl xl:text-4xl">
-              Tou can work grom anywhere.
+              You can work grom anywhere.
               <span className="block text-indigo-500">
                 Take advantage of it
               </span>
@@ -27,10 +27,12 @@ const Home = (props) => {
             </p>
             <div className="mt-4">
               <Link href="/dashboard" passHref>
-                <a
-                  className="inline-block px-4 py-2 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:inline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base"
-                  href="#"
-                >
+                <a className="btn btn-indigo shadow-lg sm:text-base" href="#">
+                  Book your scape
+                </a>
+              </Link>
+              <Link href="/dashboard" passHref>
+                <a className="ml-2 btn btn-gray sm:text-base" href="#">
                   Book your scape
                 </a>
               </Link>
