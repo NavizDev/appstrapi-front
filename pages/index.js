@@ -1,7 +1,6 @@
 import "../public/assets/styles/tailwind.css";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-import NavBar from "../components/NavBar";
 
 const Home = (props) => {
   return (
@@ -27,12 +26,14 @@ const Home = (props) => {
               on vacation
             </p>
             <div className="mt-4">
-              <a
-                className="inline-block px-4 py-2 rounded-lg shadow-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold sm:text-base"
-                href="#"
-              >
-                Book your scape
-              </a>
+              <Link href="/dashboard" passHref>
+                <a
+                  className="inline-block px-4 py-2 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:inline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base"
+                  href="#"
+                >
+                  Book your scape
+                </a>
+              </Link>
             </div>
           </div>
         </div>
