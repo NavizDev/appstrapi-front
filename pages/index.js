@@ -1,4 +1,3 @@
-import "../public/assets/styles/tailwind.css";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 
@@ -31,9 +30,9 @@ const Home = (props) => {
                   Book your scape
                 </a>
               </Link>
-              <Link href="/dashboard" passHref>
+              <Link href="/login" passHref>
                 <a className="ml-2 btn btn-gray sm:text-base" href="#">
-                  Book your scape
+                  Sign in
                 </a>
               </Link>
             </div>
@@ -51,15 +50,15 @@ const Home = (props) => {
   );
 };
 
-Home.getInitialProps = async function () {
-  const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
-  const data = await res.json();
+// Home.getInitialProps = async function () {
+//   const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
+//   const data = await res.json();
 
-  console.log(`Show data fetched. Count: ${data.length}`);
+//   console.log(`Show data fetched. Count: ${data.length}`);
 
-  return {
-    shows: data.map((entry) => entry.show),
-  };
-};
+//   return {
+//     shows: data.map((entry) => entry.show),
+//   };
+// };
 
 export default Home;
