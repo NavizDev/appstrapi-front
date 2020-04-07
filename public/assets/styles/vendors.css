@@ -29,11 +29,35 @@
 }
 
 .btn-gray:hover {
-  active: bg-indigo-300;
+  @apply bg-indigo-300;
 }
 
 .btn-gray:active {
   @apply bg-gray-500;
+}
+
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+
+.btn-blue:hover {
+  @apply bg-blue-600;
+}
+
+.btn-blue:active {
+  @apply bg-blue-700;
+}
+
+.input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+}
+
+.input:focus {
+  @apply:outline-none shadow-outline;
+}
+
+.label {
+  @apply block text-gray-700 text-sm font-bold mb-2;
 }
 
 @tailwind utilities;
