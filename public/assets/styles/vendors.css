@@ -2,4 +2,62 @@
 
 @tailwind components;
 
+/* Para agregar contenido aqui se tiene que agregar el escript watch  y ejecutarlo*/
+
+.btn {
+  @apply inline-block px-4 py-3 rounded-lg shadow-lg text-sm uppercase tracking-wider font-semibold;
+}
+
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+
+.btn-indigo {
+  @apply bg-indigo-500 text-white;
+}
+
+.btn-indigo:hover {
+  @apply bg-indigo-400;
+}
+
+.btn-indigo:active {
+  @apply bg-indigo-600;
+}
+
+.btn-gray {
+  @apply bg-gray-400 text-gray-800;
+}
+
+.btn-gray:hover {
+  @apply bg-indigo-300;
+}
+
+.btn-gray:active {
+  @apply bg-gray-500;
+}
+
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+
+.btn-blue:hover {
+  @apply bg-blue-600;
+}
+
+.btn-blue:active {
+  @apply bg-blue-700;
+}
+
+.input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+}
+
+.input:focus {
+  @apply:outline-none shadow-outline;
+}
+
+.label {
+  @apply block text-gray-700 text-sm font-bold mb-2;
+}
+
 @tailwind utilities;
