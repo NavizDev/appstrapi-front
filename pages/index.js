@@ -1,5 +1,7 @@
+import "../public/assets/styles/tailwind.css";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
+import NavBar from "../components/NavBar";
 
 const Home = (props) => {
   return (
@@ -14,7 +16,7 @@ const Home = (props) => {
               alt="Workcation"
             />
             <h1 className="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:text-4xl sm:mt-8 lg:text-3xl xl:text-4xl">
-              You can work grom anywhere.
+              Tou can work grom anywhere.
               <span className="block text-indigo-500">
                 Take advantage of it
               </span>
@@ -25,16 +27,12 @@ const Home = (props) => {
               on vacation
             </p>
             <div className="mt-4">
-              <Link href="/dashboard" passHref>
-                <a className="btn btn-indigo shadow-lg sm:text-base" href="#">
-                  Book your scape
-                </a>
-              </Link>
-              <Link href="/login" passHref>
-                <a className="ml-2 btn btn-gray sm:text-base" href="#">
-                  Sign in
-                </a>
-              </Link>
+              <a
+                className="inline-block px-4 py-2 rounded-lg shadow-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold sm:text-base"
+                href="#"
+              >
+                Book your scape
+              </a>
             </div>
           </div>
         </div>
@@ -50,15 +48,15 @@ const Home = (props) => {
   );
 };
 
-// Home.getInitialProps = async function () {
-//   const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
-//   const data = await res.json();
+Home.getInitialProps = async function () {
+  const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
+  const data = await res.json();
 
-//   console.log(`Show data fetched. Count: ${data.length}`);
+  console.log(`Show data fetched. Count: ${data.length}`);
 
-//   return {
-//     shows: data.map((entry) => entry.show),
-//   };
-// };
+  return {
+    shows: data.map((entry) => entry.show),
+  };
+};
 
 export default Home;
